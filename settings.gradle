@@ -1,0 +1,2 @@
+rootProject.name='IME Test'
+include ':app'
