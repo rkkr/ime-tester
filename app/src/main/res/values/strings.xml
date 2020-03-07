@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">IME Test</string>
+    <string name="tab_text_1">Actions</string>
+    <string name="tab_text_2">Types</string>
 </resources>
