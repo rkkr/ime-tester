@@ -9,25 +9,26 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentPagerAdapter;
 
-/**
- * A [FragmentPagerAdapter] that returns a fragment corresponding to
- * one of the sections/tabs/pages.
- */
 public class SectionsPagerAdapter extends FragmentPagerAdapter {
 
     @StringRes
     private static final int[] TAB_TITLES = new int[]{R.string.tab_text_1, R.string.tab_text_2};
+    private final Fragment[] mTabLayouts;
     private final Context mContext;
 
     public SectionsPagerAdapter(Context context, FragmentManager fm) {
         super(fm, FragmentPagerAdapter.BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT);
         mContext = context;
+        mTabLayouts =  new Fragment[]{
+                new Tab1Fragment(),
+                new Tab2Fragment()
+        };
     }
 
     @NonNull
     @Override
     public Fragment getItem(int position) {
-        return new Tab1Fragment();
+        return mTabLayouts[position];
     }
 
     @Nullable
