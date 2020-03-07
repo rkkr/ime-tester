@@ -1,4 +1,4 @@
-package rkr.imetest;
+package rkr.ime.test;
 
 import android.os.Bundle;
 
