@@ -21,6 +21,7 @@ public class MainActivity extends Activity implements TabHost.TabContentFactory 
 
         final TabHost tabHost = findViewById(android.R.id.tabhost);
         tabHost.setup();
+
         for (int i=0; i<tabNames.length; i++) {
             String name = getResources().getString(tabNames[i]);
 
