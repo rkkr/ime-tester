@@ -1,24 +1,36 @@
 package rkr.ime.test;
 
+import android.app.Activity;
 import android.os.Bundle;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.widget.TabHost;
 
-import com.google.android.material.tabs.TabLayout;
+import java.util.HashMap;
 
-import androidx.viewpager.widget.ViewPager;
-import androidx.appcompat.app.AppCompatActivity;
+public class MainActivity extends Activity implements TabHost.TabContentFactory {
 
-public class MainActivity extends AppCompatActivity {
+    private final HashMap<String, View> tabs = new HashMap<>();
+    private static final int[] tabNames = new int[] {R.string.tab_text_1, R.string.tab_text_2};
+    private static final int[] tabLayouts = new int[] {R.layout.activity_main_tab1, R.layout.activity_main_tab2};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        SectionsPagerAdapter sectionsPagerAdapter = new SectionsPagerAdapter(this, getSupportFragmentManager());
-        final ViewPager viewPager = findViewById(R.id.view_pager);
-        viewPager.setAdapter(sectionsPagerAdapter);
+        final TabHost tabHost = findViewById(android.R.id.tabhost);
+        tabHost.setup();
+        for (int i=0; i<tabNames.length; i++) {
+            String name = getResources().getString(tabNames[i]);
 
-        TabLayout tabs = findViewById(R.id.tabs);
-        tabs.setupWithViewPager(viewPager);
+            tabs.put(name, LayoutInflater.from(this).inflate(tabLayouts[i], null));
+            tabHost.addTab(tabHost.newTabSpec(name).setIndicator(name).setContent(this));
+        }
+    }
+
+    @Override
+    public View createTabContent(String tag) {
+        return tabs.get(tag);
     }
 }
