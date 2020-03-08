@@ -1,10 +1,10 @@
 # Input Method Tester
 
 <p float="left">
-  <img src="images/Screenshot_1583656915.png"
+  <img src="images/Screenshot_1583686345.png"
         alt="closeup"
         height="450">
-  <img src="images/Screenshot_1583656920.png"
+  <img src="images/Screenshot_1583686351.png"
         alt="closeup"
         height="450">
 </p>
