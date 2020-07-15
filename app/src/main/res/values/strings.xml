@@ -2,4 +2,5 @@
     <string name="app_name">IME Tester</string>
     <string name="tab_text_1">Actions</string>
     <string name="tab_text_2">Types</string>
+    <string name="tab_text_3">Caps</string>
 </resources>

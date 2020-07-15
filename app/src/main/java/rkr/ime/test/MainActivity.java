@@ -11,8 +11,16 @@ import java.util.HashMap;
 public class MainActivity extends Activity implements TabHost.TabContentFactory {
 
     private final HashMap<String, View> tabs = new HashMap<>();
-    private static final int[] tabNames = new int[] {R.string.tab_text_1, R.string.tab_text_2};
-    private static final int[] tabLayouts = new int[] {R.layout.activity_main_tab1, R.layout.activity_main_tab2};
+    private static final int[] tabNames = new int[] {
+            R.string.tab_text_1,
+            R.string.tab_text_2,
+            R.string.tab_text_3,
+    };
+    private static final int[] tabLayouts = new int[] {
+            R.layout.activity_main_tab1,
+            R.layout.activity_main_tab2,
+            R.layout.activity_main_tab3,
+    };
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
