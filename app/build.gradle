@@ -1,14 +1,14 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 31
+    compileSdkVersion 33
 
     defaultConfig {
         applicationId "rkr.imetest"
         minSdkVersion 14
-        targetSdkVersion 31
-        versionCode 5
-        versionName "1.4"
+        targetSdkVersion 33
+        versionCode 6
+        versionName "1.5"
     }
 
     buildTypes {
