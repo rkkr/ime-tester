@@ -1,14 +1,13 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 33
-
     defaultConfig {
         applicationId "rkr.imetest"
+        compileSdk 34
         minSdkVersion 14
-        targetSdkVersion 33
-        versionCode 6
-        versionName "1.5"
+        targetSdkVersion 34
+        versionCode 7
+        versionName "1.6"
     }
 
     buildTypes {
@@ -18,6 +17,7 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
+    namespace 'rkr.ime.test'
 
 }
 
