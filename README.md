@@ -24,15 +24,9 @@ Test actions and layout of your virtual keyboard. This application contains a co
 - Caps
   - Capitalization behaviour
   - https://developer.android.com/reference/android/text/InputType
-  
- More types of inputs can be added as requested.
-  
-## Downloads
 
-[<img src="https://play.google.com/intl/en_us/badges/images/generic/en-play-badge.png"
-      alt="Get it on Google Play"
-      height="80">](https://play.google.com/store/apps/details?id=rkr.imetest)
-  
+More types of inputs can be added as requested.
+
 ## License
 
 License type: MIT
